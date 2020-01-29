@@ -86,8 +86,8 @@ class SelfMonitoring(nn.Module):
         self.num_predefined_action = 1
 
         # EDIT: add FiLM
-        self.resnet = torch.hub.load("pytorch/vision", "resnet152", pretrained=True)
-        self.resnet = nn.Sequential(self.resnet.modules()[:-2])
+        self.resnet = torch.hub.load("pytorch/vision:v0.5.0", "resnet152", pretrained=True)
+        self.resnet = nn.Sequential(*list(self.resnet.children())[:-2])
 
         self.film_gen = FiLMGenerator(
             context_size=rnn_hidden_size,
@@ -198,3 +198,7 @@ class SelfMonitoring(nn.Module):
             navigable_mask,
             navigable_feat,
         )
+
+
+class SpeakerFollowerBaseline(nn.Module):
+    pass
