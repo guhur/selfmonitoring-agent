@@ -1,0 +1,174 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+AverageMeter	utils.py	/^class AverageMeter():$/;"	c
+CustomRNN	models/rnn.py	/^class CustomRNN(nn.Module):$/;"	c
+EncoderRNN	models/encoder.py	/^class EncoderRNN(nn.Module):$/;"	c
+Evaluation	eval.py	/^class Evaluation(object):$/;"	c
+FiLMGenerator	models/film.py	/^class FiLMGenerator(nn.Module):$/;"	c
+FiLMResidual	models/film.py	/^class FiLMResidual(nn.Module):$/;"	c
+FiLMedResBlock	models/film.py	/^class FiLMedResBlock(nn.Module):$/;"	c
+FiLMedResBlocks	models/film.py	/^class FiLMedResBlocks(nn.Module):$/;"	c
+PanoBaseAgent	agents/pano_agent.py	/^class PanoBaseAgent(object):$/;"	c
+PanoEnvBatch	env.py	/^class PanoEnvBatch():$/;"	c
+PanoSeq2SeqAgent	agents/pano_agent.py	/^class PanoSeq2SeqAgent(PanoBaseAgent):$/;"	c
+PanoSeq2SeqTrainer	trainer.py	/^class PanoSeq2SeqTrainer():$/;"	c
+PositionalEncoding	models/modules.py	/^class PositionalEncoding(nn.Module):$/;"	c
+R2RPanoBatch	env.py	/^class R2RPanoBatch():$/;"	c
+SENTENCE_SPLIT_REGEX	utils.py	/^    SENTENCE_SPLIT_REGEX = re.compile(r'(\\W+)')  # Split on any non-alphanumeric character$/;"	v	class:Tokenizer
+ScaledDotProductAttention	models/modules.py	/^class ScaledDotProductAttention(nn.Module):$/;"	c
+SelfMonitoring	models/policy_model.py	/^class SelfMonitoring(nn.Module):$/;"	c
+SoftAttention	models/modules.py	/^class SoftAttention(nn.Module):$/;"	c
+SpeakerFollowerBaseline	models/policy_model.py	/^class SpeakerFollowerBaseline(nn.Module):$/;"	c
+Tokenizer	utils.py	/^class Tokenizer(object):$/;"	c
+__init__	agents/pano_agent.py	/^    def __init__(self, env, results_path):$/;"	m	class:PanoBaseAgent
+__init__	agents/pano_agent.py	/^    def __init__(self, opts, env, results_path, encoder, model, feedback='sample', episode_len=20):$/;"	m	class:PanoSeq2SeqAgent
+__init__	env.py	/^    def __init__(self, features, img_spec, batch_size=64):$/;"	m	class:PanoEnvBatch
+__init__	env.py	/^    def __init__(self, opts, features, img_spec, batch_size=64, seed=10, splits=['train'], tokenizer=None):$/;"	m	class:R2RPanoBatch
+__init__	eval.py	/^    def __init__(self, splits):$/;"	m	class:Evaluation
+__init__	models/encoder.py	/^    def __init__(self, opts, vocab_size, embedding_size, hidden_size, padding_idx,$/;"	m	class:EncoderRNN
+__init__	models/film.py	/^    def __init__($/;"	m	class:FiLMedResBlocks
+__init__	models/film.py	/^    def __init__(self, context_size, num_resblocks, conv_hidden):$/;"	m	class:FiLMGenerator
+__init__	models/film.py	/^    def __init__(self, conv_hidden, with_batch_norm=True):$/;"	m	class:FiLMedResBlock
+__init__	models/modules.py	/^    def __init__(self):$/;"	m	class:SoftAttention
+__init__	models/modules.py	/^    def __init__(self, d_model, attn_dropout=0.1):$/;"	m	class:ScaledDotProductAttention
+__init__	models/modules.py	/^    def __init__(self, d_model, dropout, max_len=80):$/;"	m	class:PositionalEncoding
+__init__	models/policy_model.py	/^    def __init__(self, opts, img_fc_dim, img_fc_use_batchnorm, img_dropout, img_feat_input_dim,$/;"	m	class:SelfMonitoring
+__init__	models/policy_model.py	/^    def __init__(self, opts, img_fc_dim, img_fc_use_batchnorm, img_dropout, img_feat_input_dim,$/;"	m	class:SpeakerFollowerBaseline
+__init__	models/rnn.py	/^    def __init__(self, cell_class, input_size, hidden_size, num_layers=1,$/;"	m	class:CustomRNN
+__init__	trainer.py	/^    def __init__(self, opts, agent, optimizer, train_iters_epoch=100):$/;"	m	class:PanoSeq2SeqTrainer
+__init__	utils.py	/^    def __init__(self):$/;"	m	class:AverageMeter
+__init__	utils.py	/^    def __init__(self, remove_punctuation=False, reversed=True, vocab=None, encoding_length=20):$/;"	m	class:Tokenizer
+_forward_rnn	models/rnn.py	/^    def _forward_rnn(cell, input_, mask, hx):$/;"	m	class:CustomRNN
+_get_distance	agents/pano_agent.py	/^    def _get_distance(self, ob):$/;"	m	class:PanoBaseAgent
+_get_nearest	eval.py	/^    def _get_nearest(self, scan, goal_id, path):$/;"	m	class:Evaluation
+_get_obs	env.py	/^    def _get_obs(self):$/;"	m	class:R2RPanoBatch
+_load_nav_graphs	env.py	/^    def _load_nav_graphs(self):$/;"	m	class:R2RPanoBatch
+_make_id	env.py	/^    def _make_id(scanId, viewpointId):$/;"	f	function:load_features
+_make_id	env.py	/^    def _make_id(self, scanId, viewpointId):$/;"	m	class:PanoEnvBatch
+_next_minibatch	env.py	/^    def _next_minibatch(self):$/;"	m	class:R2RPanoBatch
+_next_viewpoint	agents/pano_agent.py	/^    def _next_viewpoint(self, obs, viewpoints, navigable_index, action, ended):$/;"	m	class:PanoBaseAgent
+_pano_navigable	env.py	/^    def _pano_navigable(self, state, goalViewpointId):$/;"	m	class:R2RPanoBatch
+_score_item	eval.py	/^    def _score_item(self, instr_id, path):$/;"	m	class:Evaluation
+_select_action	agents/pano_agent.py	/^    def _select_action(self, logit, ended, is_prob=False, fix_action_ended=True):$/;"	m	class:PanoBaseAgent
+_shortest_path_action	env.py	/^    def _shortest_path_action(self, state, goalViewpointId):$/;"	m	class:R2RPanoBatch
+_sort_batch	agents/pano_agent.py	/^    def _sort_batch(self, obs):$/;"	m	class:PanoBaseAgent
+asMinutes	utils.py	/^def asMinutes(s):$/;"	f
+base_vocab	utils.py	/^base_vocab = ['<PAD>', '<START>', '<EOS>', '<UNK>']$/;"	v
+beam_search	agents/pano_agent.py	/^    def beam_search(self, batch_idx, logprobs, tmp_obs, traj, ended, last_recorded, viewpoints, navigable_index,$/;"	m	class:PanoSeq2SeqAgent
+beam_step_state_factored	agents/pano_agent.py	/^        def beam_step_state_factored(visited_state, batch_idx, scan_id, logprobsf, beam_size, step, beam_seq,$/;"	f	function:PanoSeq2SeqAgent.beam_search
+build_mlp	models/modules.py	/^def build_mlp(input_dim, hidden_dims, output_dim=None,$/;"	f
+build_vocab	utils.py	/^def build_vocab(splits=['train'], min_count=5, start_vocab=base_vocab):$/;"	f
+create_mask	models/encoder.py	/^    def create_mask(self, batchsize, max_length, length):$/;"	m	class:EncoderRNN
+create_mask	models/modules.py	/^def create_mask(batchsize, max_length, length):$/;"	f
+decode_sentence	utils.py	/^    def decode_sentence(self, encoding):$/;"	m	class:Tokenizer
+default	main.py	/^                    default='img_features\/ResNet-152-imagenet.tsv',$/;"	v
+default	main.py	/^                    default='tasks\/R2R-pano\/checkpoints\/pano-seq2seq\/',$/;"	v
+default	main.py	/^                    default='tasks\/R2R-pano\/data\/train_vocab.txt',$/;"	v
+default	main.py	/^                    default='tasks\/R2R-pano\/data\/trainval_vocab.txt',$/;"	v
+default	main.py	/^                    default='tasks\/R2R-pano\/results\/',$/;"	v
+default	main.py	/^                    default='tensorboard_logs\/pano-seq2seq',$/;"	v
+device	models/modules.py	/^device = torch.device("cuda" if torch.cuda.is_available() else "cpu")$/;"	v
+distance	utils.py	/^    def distance(pose1, pose2):$/;"	f	function:load_nav_graphs
+encode_sentence	utils.py	/^    def encode_sentence(self, sentence):$/;"	m	class:Tokenizer
+eval	trainer.py	/^    def eval(self, epoch, val_env, tb_logger=None):$/;"	m	class:PanoSeq2SeqTrainer
+find_length	utils.py	/^def find_length(list_tensors):$/;"	f
+flip	models/encoder.py	/^    def flip(self, x, dim):$/;"	m	class:EncoderRNN
+forward	models/encoder.py	/^    def forward(self, inputs, lengths):$/;"	m	class:EncoderRNN
+forward	models/film.py	/^    def forward(self, context_vector):$/;"	m	class:FiLMGenerator
+forward	models/film.py	/^    def forward(self, feat, res, gamma, beta):$/;"	m	class:FiLMResidual
+forward	models/film.py	/^    def forward(self, features, film_parameters):$/;"	m	class:FiLMedResBlocks
+forward	models/film.py	/^    def forward(self, input, gamma, beta):$/;"	m	class:FiLMedResBlock
+forward	models/modules.py	/^    def forward(self, h, proj_context, context=None, mask=None, reverse_attn=False):$/;"	m	class:SoftAttention
+forward	models/modules.py	/^    def forward(self, q, k, v, attn_mask=None, reverse_attn=False):$/;"	m	class:ScaledDotProductAttention
+forward	models/modules.py	/^    def forward(self, x):$/;"	m	class:PositionalEncoding
+forward	models/policy_model.py	/^    def forward(self, img_feat, navigable_feat, pre_feat, h_0, c_0, ctx, navigable_index=None, ctx_mask=None):$/;"	m	class:SpeakerFollowerBaseline
+forward	models/policy_model.py	/^    def forward(self, img_feat, navigable_feat, pre_feat, question, h_0, c_0, ctx, pre_ctx_attend,$/;"	m	class:SelfMonitoring
+forward	models/rnn.py	/^    def forward(self, input_, mask, hx=None):$/;"	m	class:CustomRNN
+getStates	env.py	/^    def getStates(self):$/;"	m	class:PanoEnvBatch
+get_cell	models/rnn.py	/^    def get_cell(self, layer):$/;"	m	class:CustomRNN
+get_value_loss_from_start	agents/pano_agent.py	/^    def get_value_loss_from_start(self, traj, predicted_value, ended, norm_value=True, threshold=5):$/;"	m	class:PanoSeq2SeqAgent
+get_value_loss_from_start_sigmoid	agents/pano_agent.py	/^    def get_value_loss_from_start_sigmoid(self, traj, predicted_value, ended, norm_value=True, threshold=5):$/;"	m	class:PanoSeq2SeqAgent
+heading_elevation_feat	env.py	/^    def heading_elevation_feat(self, state, horizon_views=12, tile=32):$/;"	m	class:R2RPanoBatch
+help	main.py	/^                         we add one because the agent can decide to stay at its current location')$/;"	v
+help	main.py	/^                        It decides where to store samples and models')$/;"	v
+help	main.py	/^                    help='A lower bound on the learning rate of all param groups or each group respectively')$/;"	v
+help	main.py	/^                    help='Action set to 0 if ended. This prevent the model keep getting loss from logit after ended')$/;"	v
+help	main.py	/^                    help='No training. Resume from a model and run evaluation')$/;"	v
+help	main.py	/^                    help='No training. Resume from a model and run testing for submission')$/;"	v
+help	main.py	/^                    help='No training. Resume from a model and run with Progress Inference')$/;"	v
+help	main.py	/^                    help='No training. Resume from a model and run with beam search')$/;"	v
+help	main.py	/^                    help='Number of epochs for training with data augmentation first')$/;"	v
+help	main.py	/^                    help='Number of epochs with no improvement after which learning rate will be reduced.')$/;"	v
+help	main.py	/^                    help='ResNet-152: 2048, if use angle, the input is 2176')$/;"	v
+help	main.py	/^                    help='The number of beams used with beam search')$/;"	v
+help	main.py	/^                    help='Training with the synthetic data generated with speaker')$/;"	v
+help	main.py	/^                    help='Use Sigmoid function for progress monitor instead of Tanh')$/;"	v
+help	main.py	/^                    help='Use TensorBoard for loss visualization')$/;"	v
+help	main.py	/^                    help='add relative heading and elevation angle into image feature')$/;"	v
+help	main.py	/^                    help='default embedding_size for language encoder')$/;"	v
+help	main.py	/^                    help='how often do we eval the trained model')$/;"	v
+help	main.py	/^                    help='ignore target after agent has ended')$/;"	v
+help	main.py	/^                    help='maximum length of episode')$/;"	v
+help	main.py	/^                    help='number of iterations per epoch')$/;"	v
+help	main.py	/^                    help='number of total epochs to run')$/;"	v
+help	main.py	/^                    help='option for reversing the sentence during encoding')$/;"	v
+help	main.py	/^                    help='options: sample | argmax (this is the feedback for testing only)')$/;"	v
+help	main.py	/^                    help='options: sample | mistake (this is the feedback for training only)')$/;"	v
+help	main.py	/^                    help='options: self-monitoring | speaker-baseline')$/;"	v
+help	main.py	/^                    help='random seed')$/;"	v
+help	main.py	/^                    help='teleporting: jump directly to next viewpoint. If not enabled, rotate and forward until you reach the '$/;"	v
+help	main.py	/^                    help='the original ''encode_sentence'' does not remove punctuation'$/;"	v
+help	main.py	/^                    help='the shortest path to the goal may not match with the instruction if we use student forcing, '$/;"	v
+help	main.py	/^                    help='the weight applied on the auxiliary value loss')$/;"	v
+help	main.py	/^                    help='two options for resuming the model: latest | best')$/;"	v
+help	main.py	/^                    help='weighting for entropy loss')$/;"	v
+help	main.py	/^                    help='when using value prediction, do we normalize the distance improvement as value target?')$/;"	v
+help	main.py	/^                    help='when using value prediction, use MSE loss with sum or average across non-navigable directions?')$/;"	v
+init_traj	agents/pano_agent.py	/^    def init_traj(self, obs):$/;"	m	class:PanoSeq2SeqAgent
+is_experiment	utils.py	/^def is_experiment():$/;"	f
+load_datasets	utils.py	/^def load_datasets(splits, opts=None):$/;"	f
+load_features	env.py	/^def load_features(feature_store):$/;"	f
+load_nav_graphs	utils.py	/^def load_nav_graphs(scans):$/;"	f
+main	main.py	/^def main(opts):$/;"	f
+model_seen_step	agents/pano_agent.py	/^    def model_seen_step(self, tmp_obs, ended, tmp_pre_feat, tmp_h_t, tmp_c_t, tmp_ctx, tmp_ctx_mask,$/;"	m	class:PanoSeq2SeqAgent
+newEpisodes	env.py	/^    def newEpisodes(self, scanIds, viewpointIds, headings):$/;"	m	class:PanoEnvBatch
+opts	main.py	/^    opts = parser.parse_args()$/;"	v
+pad_list_tensors	utils.py	/^def pad_list_tensors(list_tensor, max_length=None):$/;"	f
+pad_tensor	utils.py	/^def pad_tensor(tensor, length):$/;"	f
+padding_idx	utils.py	/^padding_idx = base_vocab.index('<PAD>')$/;"	v
+pano_navigable_feat	agents/pano_agent.py	/^    def pano_navigable_feat(self, obs, ended):$/;"	m	class:PanoBaseAgent
+parser	main.py	/^parser = argparse.ArgumentParser(description='PyTorch for Matterport3D Agent with panoramic view and action')$/;"	v
+pp	eval.py	/^pp = pprint.PrettyPrinter(indent=4)$/;"	v
+print_progress	utils.py	/^def print_progress(iteration, total, prefix='', suffix='', decimals=1, bar_length=100):$/;"	f
+progress_inference	agents/pano_agent.py	/^    def progress_inference(self, batch_idx, logprobs, tmp_obs, traj, ended, last_recorded, viewpoints,$/;"	m	class:PanoSeq2SeqAgent
+progress_inference_step	agents/pano_agent.py	/^    def progress_inference_step(self, visited_state, batch_idx, scan_id, logprobsf, beam_size, step, beam_seq,$/;"	m	class:PanoSeq2SeqAgent
+proj_masking	models/modules.py	/^def proj_masking(feat, projector, mask=None):$/;"	f
+read_vocab	utils.py	/^def read_vocab(path):$/;"	f
+reset	env.py	/^    def reset(self):$/;"	m	class:R2RPanoBatch
+reset	utils.py	/^    def reset(self):$/;"	m	class:AverageMeter
+reset_epoch	env.py	/^    def reset_epoch(self):$/;"	m	class:R2RPanoBatch
+reset_parameters	models/rnn.py	/^    def reset_parameters(self):$/;"	m	class:CustomRNN
+resume_training	utils.py	/^def resume_training(opts, model, encoder, optimizer):$/;"	f
+rollout	agents/pano_agent.py	/^    def rollout(self):$/;"	m	class:PanoSeq2SeqAgent
+rollout_monitor	agents/pano_agent.py	/^    def rollout_monitor(self):$/;"	m	class:PanoSeq2SeqAgent
+rotate_to_target_heading	env.py	/^        def rotate_to_target_heading(target_heading, state):$/;"	f	function:R2RPanoBatch.step
+sample_beam	agents/pano_agent.py	/^    def sample_beam(self, beam_size=5):$/;"	m	class:PanoSeq2SeqAgent
+sample_progress_inference	agents/pano_agent.py	/^    def sample_progress_inference(self, beam_size=5):$/;"	m	class:PanoSeq2SeqAgent
+save_checkpoint	utils.py	/^def save_checkpoint(state, is_best, checkpoint_dir='checkpoints\/', name='checkpoint'):$/;"	f
+score	eval.py	/^    def score(self, output_file):$/;"	m	class:Evaluation
+set_tb_logger	utils.py	/^def set_tb_logger(log_dir, exp_name, resume):$/;"	f
+setup	utils.py	/^def setup(opts, seed=1):$/;"	f
+shortest_path_to_gt_traj	env.py	/^    def shortest_path_to_gt_traj(self, state, gt_path):$/;"	m	class:R2RPanoBatch
+split_sentence	utils.py	/^    def split_sentence(self, sentence):$/;"	m	class:Tokenizer
+step	env.py	/^    def step(self, scanIds, viewpointIds, headings):$/;"	m	class:R2RPanoBatch
+teleport_beam	env.py	/^    def teleport_beam(self, batch_idx, scanIds, viewpointIds, headings):$/;"	m	class:R2RPanoBatch
+timeSince	utils.py	/^def timeSince(since, percent):$/;"	f
+train	trainer.py	/^    def train(self, epoch, train_env, tb_logger=None):$/;"	m	class:PanoSeq2SeqTrainer
+update	utils.py	/^    def update(self, val, n=1):$/;"	m	class:AverageMeter
+update_traj	agents/pano_agent.py	/^    def update_traj(self, obs, traj, img_attn, ctx_attn, value, next_viewpoint_idx,$/;"	m	class:PanoSeq2SeqAgent
+write_results	agents/pano_agent.py	/^    def write_results(self):$/;"	m	class:PanoBaseAgent
+write_vocab	utils.py	/^def write_vocab(vocab, path):$/;"	f

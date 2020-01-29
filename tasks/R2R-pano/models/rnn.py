@@ -7,8 +7,18 @@ class CustomRNN(nn.Module):
     A module that runs multiple steps of RNN cell
     With this module, you can use mask for variable-length input
     """
-    def __init__(self, cell_class, input_size, hidden_size, num_layers=1,
-                 use_bias=True, batch_first=False, dropout=0, **kwargs):
+
+    def __init__(
+        self,
+        cell_class,
+        input_size,
+        hidden_size,
+        num_layers=1,
+        use_bias=True,
+        batch_first=False,
+        dropout=0,
+        **kwargs,
+    ):
         super(CustomRNN, self).__init__()
         self.cell_class = cell_class
         self.input_size = input_size
@@ -19,15 +29,15 @@ class CustomRNN(nn.Module):
 
         for layer in range(num_layers):
             layer_input_size = input_size if layer == 0 else hidden_size
-            cell = cell_class(input_size=layer_input_size,
-                              hidden_size=hidden_size,
-                              **kwargs)
-            setattr(self, 'cell_{}'.format(layer), cell)
+            cell = cell_class(
+                input_size=layer_input_size, hidden_size=hidden_size, **kwargs
+            )
+            setattr(self, "cell_{}".format(layer), cell)
         self.dropout_layer = nn.Dropout(dropout)
         self.reset_parameters()
 
     def get_cell(self, layer):
-        return getattr(self, 'cell_{}'.format(layer))
+        return getattr(self, "cell_{}".format(layer))
 
     def reset_parameters(self):
         for layer in range(self.num_layers):
@@ -41,8 +51,8 @@ class CustomRNN(nn.Module):
         for time in range(max_time):
             h_next, c_next = cell(input_[time], hx=hx)
             mask_ = mask[time].unsqueeze(1).expand_as(h_next)
-            h_next = h_next*mask_ + hx[0]*(1 - mask_)
-            c_next = c_next*mask_ + hx[1]*(1 - mask_)
+            h_next = h_next * mask_ + hx[0] * (1 - mask_)
+            c_next = c_next * mask_ + hx[1] * (1 - mask_)
             hx_next = (h_next, c_next)
             output.append(h_next)
             hx = hx_next
@@ -64,7 +74,8 @@ class CustomRNN(nn.Module):
         for layer in range(self.num_layers):
             cell = self.get_cell(layer)
             layer_output, (layer_h_n, layer_c_n) = CustomRNN._forward_rnn(
-                cell=cell, input_=input_, mask=mask, hx=hx)
+                cell=cell, input_=input_, mask=mask, hx=hx
+            )
             input_ = self.dropout_layer(layer_output)
             h_n.append(layer_h_n)
             c_n.append(layer_c_n)
